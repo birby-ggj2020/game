@@ -1,18 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
-[CreateAssetMenu(fileName="a_part_type", menuName="Birby/New Creature Part Type")]
-public class CreaturePartType : ScriptableObject
+public enum CreaturePartType
 {
-    public string name;
+    HEAD,
+    LIMBS,
+    //BODY,
+    ACCESSORY,
+    SKIN
 }
 
-[CreateAssetMenu(fileName="a_part", menuName="Birby/New Creature Part")]
-public class CreaturePart : ScriptableObject
+public class CreaturePart
 {
     public string name;
     public CreaturePartType type;
     public Sprite sprite;
+
+    public CreaturePart(string name,
+                        CreaturePartType type,
+                        Sprite sprite)
+    {
+        this.name = name;
+        this.type = type;
+        this.sprite = sprite;
+
+        if(this.sprite != null){
+            Debug.Log("Loaded sprite");
+
+        }
+    }
 }

@@ -10,7 +10,6 @@ public class ExpandableButton : MonoBehaviour
 
     //public Sprite BodyImage;
 
-
     public void AddParts(IEnumerable<CreaturePart> parts, Image LimbsImage, Image SkinImage, Image HeadImage, Image AccessoryImage ){
         foreach(var part in parts){
             var button = GameObject.Instantiate(ButtonPrefab);
@@ -21,22 +20,20 @@ public class ExpandableButton : MonoBehaviour
             button.GetComponent<Button>().onClick.AddListener(
                 () => {
                     Image sprite = null;
-                    switch(part.type.name){
-                        case "accessory":
+                    switch(part.type){
+                        case CreaturePartType.ACCESSORY:
                             sprite = AccessoryImage;
                             break;
-                        case "head":
+                        case CreaturePartType.HEAD:
                             sprite = HeadImage;
                             break;
-                        case "limbs":
+                        case CreaturePartType.LIMBS:
                             sprite = LimbsImage;
                             break;
-                        case "skin":
+                        case CreaturePartType.SKIN:
                             sprite = SkinImage;
                             break;
                         default:
-                            Debug.Log(part.type.name);
-                            Debug.Log(part.name);
                             throw new ArgumentOutOfRangeException();
                     }
                     //var image = sprite.GetComponent<Image>();
@@ -47,7 +44,7 @@ public class ExpandableButton : MonoBehaviour
 
                     }
 
-Debug.Log("part.name is " + part.name); 
+                    Debug.Log("part.name is " + part.name); 
                     if(part.sprite != null){
                         
                         Debug.Log("part.Sprite is not null");
@@ -56,7 +53,7 @@ Debug.Log("part.name is " + part.name);
 
                     }
                     sprite.gameObject.SetActive(true);
-                     sprite.sprite = part.sprite; 
+                    sprite.sprite = part.sprite; 
                 }
             );
         }

@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-//TODO: pull name/background_img_path out to a config; only hardcode actual code.
+//TODO: pull name/background_img out to a config; only hardcode actual code.
 public interface Habitat
 {
     string name {get;}
-    string background_img_path {get;}
+    Image background_img {get;}
     bool creature_is_correct(Creature creature);
 }
 
@@ -17,9 +18,9 @@ public class GrasslandsHabitat : Habitat
         get => "Grasslands";
     }
 
-    public string background_img_path
+    public Image background_img
     {
-        get => "Assets/Graphics/grasslands.png";
+        get => Resources.Load("Assets/Graphics/grasslands.png") as Image;
     }
 
     public bool creature_is_correct(Creature creature)
@@ -36,9 +37,9 @@ public class TundraHabitat : Habitat
         get => "Tundra";
     }
 
-    public string background_img_path
+    public Image background_img
     {
-        get => "Assets/Graphics/snow.png";
+        get => Resources.Load("Assets/Graphics/snow.png") as Image;
     }
 
     public bool creature_is_correct(Creature creature)

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class HabitatState
 {
@@ -23,6 +24,8 @@ public static class GameState
 {
     public static List<HabitatState> habitats;
     public static int? active_habitat_index;
+    public static List<CreaturePart> creature_parts;
+    // public static Dictionary<CreaturePartType, List<CreaturePart> > creature_parts_by_type;
 
     static GameState()
     {
@@ -31,5 +34,21 @@ public static class GameState
             new HabitatState(new TundraHabitat())
         };
         GameState.active_habitat_index = null;
+
+        
+        GameState.creature_parts = new List<CreaturePart>{
+            new CreaturePart(
+                "LongNeck",
+                CreaturePartType.HEAD,
+                LoadImage("Assets/Graphics/creature_parts/Exquisite_Small-24.png")
+                
+            )
+        };
+    }
+
+    private static Sprite LoadImage(string path){
+        var texture = AssetDatabase.LoadAssetAtPath(path, typeof(Texture2D)) as Texture2D;
+        var sprite = Sprite.Create(texture, new Rect(0,0,texture.width,texture.height), new Vector2(0f,0f), 1.0f);
+        return sprite;
     }
 }
