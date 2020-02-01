@@ -22,12 +22,14 @@ public class HabitatState
 public static class GameState
 {
     public static List<HabitatState> habitats;
+    public static int? active_habitat_index;
 
     static GameState()
     {
         GameState.habitats = new List<HabitatState>{
-            new HabitatState(new GrasslandHabitat()),
+            new HabitatState(new GrasslandsHabitat()),
             new HabitatState(new TundraHabitat())
         };
+        GameState.active_habitat_index = null;
     }
 }

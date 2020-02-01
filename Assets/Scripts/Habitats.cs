@@ -10,11 +10,11 @@ public interface Habitat
     bool creature_is_correct(Creature creature);
 }
 
-public class GrasslandHabitat : Habitat
+public class GrasslandsHabitat : Habitat
 {
     public string name
     {
-        get => "Grassland";
+        get => "Grasslands";
     }
 
     public string background_img_path

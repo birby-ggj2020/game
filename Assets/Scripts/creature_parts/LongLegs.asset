@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: LongLegs
   type: {fileID: 11400000, guid: ed08a2af5356ac340a790c53e6134c6d, type: 2}
-  image_path: {fileID: 21300000, guid: 1c37ed816b050a94dadc19ffad516e8f, type: 3}
+  sprite: {fileID: 21300000, guid: 1c37ed816b050a94dadc19ffad516e8f, type: 3}

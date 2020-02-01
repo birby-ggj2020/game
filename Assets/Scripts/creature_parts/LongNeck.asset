@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: LongNeck
   type: {fileID: 11400000, guid: aced3d3c664a82149838851755df3dc6, type: 2}
-  image_path: {fileID: 21300000, guid: fcc0972447fb78b42bac16d4e77d6fae, type: 3}
+  sprite: {fileID: 21300000, guid: fcc0972447fb78b42bac16d4e77d6fae, type: 3}

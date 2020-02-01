@@ -5,21 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class BiomeSelector : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void OpenGrasslandsBiome()
     {
-        
+        GameState.active_habitat_index = 0;
+        SceneManager.LoadScene("CreatureEditor");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OpenTundraBiome()
     {
-        
-    }
-
-    public void BackToMainMenu()
-    {
-        SceneManager.LoadScene("MainMenu");
+        GameState.active_habitat_index = 1;
+        SceneManager.LoadScene("CreatureEditor");
     }
 
     public void Exit()
