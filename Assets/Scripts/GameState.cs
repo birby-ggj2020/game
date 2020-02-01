@@ -23,6 +23,8 @@ public static class GameState
 {
     public static List<HabitatState> habitats;
     public static int? active_habitat_index;
+    public static List<CreaturePart> creature_parts;
+    // public static Dictionary<CreaturePartType, List<CreaturePart> > creature_parts_by_type;
 
     static GameState()
     {
@@ -31,5 +33,13 @@ public static class GameState
             new HabitatState(new TundraHabitat())
         };
         GameState.active_habitat_index = null;
+
+        GameState.creature_parts = new List<CreaturePart>{
+            new CreaturePart(
+                "LongNeck",
+                CreaturePartType.HEAD,
+                Resources.Load("Assets/Graphics/creature_parts/Exquisite_Small-24.png") as Sprite
+            )
+        };
     }
 }

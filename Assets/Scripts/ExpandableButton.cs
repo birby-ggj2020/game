@@ -12,7 +12,7 @@ public class ExpandableButton : MonoBehaviour
 
     }
 
-    public void AddParts(IEnumerable<Part> parts){
+    public void AddParts(IEnumerable<CreaturePart> parts){
         foreach(var part in parts){
             var button = GameObject.Instantiate(ButtonPrefab);
             button.transform.parent = MenuPanel;
