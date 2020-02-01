@@ -22,10 +22,5 @@ public class CreaturePart
         this.name = name;
         this.type = type;
         this.sprite = sprite;
-
-        if(this.sprite != null){
-            Debug.Log("Loaded sprite");
-
-        }
     }
 }

@@ -34,8 +34,6 @@ public static class GameState
             new HabitatState(new TundraHabitat())
         };
         GameState.active_habitat_index = null;
-
-        
         GameState.creature_parts = new List<CreaturePart>{
             new CreaturePart(
                 "LongNeck",
@@ -49,6 +47,6 @@ public static class GameState
     private static Sprite LoadImage(string path){
         var texture = AssetDatabase.LoadAssetAtPath(path, typeof(Texture2D)) as Texture2D;
         var sprite = Sprite.Create(texture, new Rect(0,0,texture.width,texture.height), new Vector2(0f,0f), 1.0f);
-        return sprite;
+        return sprite;        
     }
 }

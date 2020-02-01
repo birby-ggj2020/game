@@ -8,9 +8,8 @@ public class ExpandableButton : MonoBehaviour
     public GameObject ButtonPrefab;
     public Transform MenuPanel;
 
-    //public Sprite BodyImage;
-
     public void AddParts(IEnumerable<CreaturePart> parts, Image LimbsImage, Image SkinImage, Image HeadImage, Image AccessoryImage ){
+
         foreach(var part in parts){
             var button = GameObject.Instantiate(ButtonPrefab);
             button.transform.parent = MenuPanel;

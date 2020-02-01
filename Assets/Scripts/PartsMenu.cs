@@ -63,4 +63,9 @@ public class PartsMenu : MonoBehaviour
     {
         
     }
+    public void CollapseAll(){
+        for(var i = 0; i < this.transform.childCount; i++){
+            this.transform.GetChild(i);
+        }
+    }
 }
