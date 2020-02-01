@@ -12,6 +12,11 @@ public class HabitatState
         this.habitat = hab;
         this.creature = new Creature();
     }
+
+    public bool creature_is_correct()
+    {
+        return this.habitat.creature_is_correct(this.creature);
+    }
 }
 
 public static class GameState
