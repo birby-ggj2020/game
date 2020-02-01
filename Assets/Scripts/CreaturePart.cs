@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CreaturePartType
+[CreateAssetMenu(fileName="a_part_type", menuName="Birby/New Creature Part Type")]
+public class CreaturePartType : ScriptableObject
 {
-    HEAD,
-    LIMBS,
-    // BODY,
-    ACCESSORY,
-    SKIN
+    public string name;
 }
 
 [CreateAssetMenu(fileName="a_part", menuName="Birby/New Creature Part")]
