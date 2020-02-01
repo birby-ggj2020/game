@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dda8d89f6afb37445b6114f4f8c482b5, type: 3}
-  m_Name: LongLegs
+  m_Name: Wheels
   m_EditorClassIdentifier: 
-  name: LongLegs
+  name: Wheels
   type: {fileID: 11400000, guid: ed08a2af5356ac340a790c53e6134c6d, type: 2}
-  image_path: {fileID: 21300000, guid: 1c37ed816b050a94dadc19ffad516e8f, type: 3}
+  image_path: {fileID: 21300000, guid: 745a01be8bc8bda4e86af30decabe7cf, type: 3}

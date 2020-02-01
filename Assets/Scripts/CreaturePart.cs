@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName="a_part_type", menuName="Birby/New Creature Part Type")]
 public class CreaturePartType : ScriptableObject
@@ -13,5 +14,5 @@ public class CreaturePart : ScriptableObject
 {
     public string name;
     public CreaturePartType type;
-    public string image_path;
+    public Sprite sprite;
 }
