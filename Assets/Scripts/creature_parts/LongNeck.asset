@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LongNeck
   m_EditorClassIdentifier: 
   name: LongNeck
-  type: 0
+  type: {fileID: 11400000, guid: aced3d3c664a82149838851755df3dc6, type: 2}
   image_path: Assets/Graphics/creature_parts/Exquisite_Small-24.png

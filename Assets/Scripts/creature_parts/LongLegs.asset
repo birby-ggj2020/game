@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LongLegs
   m_EditorClassIdentifier: 
   name: LongLegs
-  type: 1
+  type: {fileID: 11400000, guid: ed08a2af5356ac340a790c53e6134c6d, type: 2}
   image_path: Assets/Graphics/creature_parts/Exquisite_Small-17.png
