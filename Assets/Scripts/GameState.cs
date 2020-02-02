@@ -19,9 +19,18 @@ public static class GameState
         };
         GameState.active_habitat_index = null;
 
-        GameState.creature_parts = _CreaturePartLoader.load_creature_parts(
+        GameState.creature_parts = GameUtils.load_creature_parts(
             "creature_parts.json"
         );
+    }
+
+    public static HabitatState active_habitat_state()
+    {
+        if (GameState.active_habitat_index.HasValue)
+        {
+            return GameState.habitats[GameState.active_habitat_index.Value];
+        }
+        return null;
     }
 }
 
@@ -42,7 +51,7 @@ public class HabitatState
     }
 }
 
-public static class _CreaturePartLoader
+public static class GameUtils
 {
     [System.Serializable]
     public class _RawPartList
@@ -77,7 +86,7 @@ public static class _CreaturePartLoader
         List<CreaturePart> loaded_parts = new List<CreaturePart>();
         foreach (_RawPart raw in raw_parts.parts)
         {
-            loaded_parts.Add(_CreaturePartLoader._parse_part(raw));
+            loaded_parts.Add(GameUtils._parse_part(raw));
         }
         return loaded_parts;
     }
@@ -86,17 +95,17 @@ public static class _CreaturePartLoader
     {
         return new CreaturePart(
             raw.name,
-            _CreaturePartLoader._parse_part_type(raw.type),
-            _CreaturePartLoader._parse_sprite_path(raw.sprite_path)
+            GameUtils._parse_part_type(raw.type),
+            GameUtils.parse_sprite_path(raw.sprite_path)
         );
     }
 
     private static CreaturePartType _parse_part_type(string name)
     {
-        return _CreaturePartLoader._PART_TYPE_LOOKUP[name];
+        return GameUtils._PART_TYPE_LOOKUP[name];
     }
 
-    public static Sprite _parse_sprite_path(string sprite_path)
+    public static Sprite parse_sprite_path(string sprite_path)
     {
         var texture = AssetDatabase.LoadAssetAtPath(
             sprite_path,

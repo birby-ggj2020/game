@@ -6,13 +6,12 @@ using UnityEngine.UI;
 using UnityEditor;
 public class CreatureEditor : MonoBehaviour
 {
-
      void Start()
     {   
         if(GameState.active_habitat_index.HasValue){
             var image = this.GetComponentInChildren<Image>();
-            var path = GameState.habitats[GameState.active_habitat_index.Value].habitat.background_img_path;
-            image.sprite = _parse_sprite_path(path);
+            var path = GameState.active_habitat_state().habitat.background_img_path;
+            image.sprite = GameUtils.parse_sprite_path(path);
         }
     }
 

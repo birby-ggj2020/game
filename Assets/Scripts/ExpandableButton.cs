@@ -35,22 +35,6 @@ public class ExpandableButton : MonoBehaviour
                         default:
                             throw new ArgumentOutOfRangeException();
                     }
-                    //var image = sprite.GetComponent<Image>();
-                    if(sprite != null){
-                        Debug.Log("Sprite is not null");
-                    } else {
-                        Debug.Log("Sprite is null");
-
-                    }
-
-                    Debug.Log("part.name is " + part.name); 
-                    if(part.sprite != null){
-                        
-                        Debug.Log("part.Sprite is not null");
-                    } else {
-                        Debug.Log("part.Sprite is null");
-
-                    }
                     sprite.gameObject.SetActive(true);
                     sprite.sprite = part.sprite; 
                 }
