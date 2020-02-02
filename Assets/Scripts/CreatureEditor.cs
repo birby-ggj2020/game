@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEditor;
-public class Background : MonoBehaviour
+public class CreatureEditor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {   if(GameState.active_habitat_index.HasValue){
-            var image = this.GetComponent<Image>();
+
+     void Start()
+    {   
+        if(GameState.active_habitat_index.HasValue){
+            var image = this.GetComponentInChildren<Image>();
             var path = GameState.habitats[GameState.active_habitat_index.Value].habitat.background_img_path;
             image.sprite = _parse_sprite_path(path);
         }
@@ -26,5 +28,9 @@ public class Background : MonoBehaviour
             new Vector2(0f, 0f), 1.0f
         );
         return sprite;       
+    }
+    public void Back(){
+        Debug.Log("Button Clicked");
+        SceneManager.LoadScene("BiomeSelector");
     }
 }
