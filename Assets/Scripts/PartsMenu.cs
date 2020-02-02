@@ -17,10 +17,14 @@ public class PartsMenu : MonoBehaviour
     public Image tail_img;
     // public Image skin_img; //TODO: how do we do skin??
 
+
+
     void Start()
     {
+        var buttons = new List<Button>(); 
         this.m_parts = GameState.creature_parts;
         var groupedParts = this.m_parts.GroupBy(p => p.type);
+        var toggleGroup = this.GetComponent<ToggleGroup>();
 
         foreach(var grouping in groupedParts){
             var partButton = Instantiate(PartButtonPrefab, new Vector3(0,0,0), Quaternion.identity);
@@ -36,6 +40,9 @@ public class PartsMenu : MonoBehaviour
                 this.tail_img/*,
                 this.skin_img*/ //TODO: how do we do skin??
             );
+            var toggle = expandableButton.GetComponent<Toggle>();
+            toggle.group = toggleGroup;
+            
         }
     }
     private string TypeToString(CreaturePartType type){

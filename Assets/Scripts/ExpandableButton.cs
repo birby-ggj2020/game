@@ -8,6 +8,11 @@ public class ExpandableButton : MonoBehaviour
     public GameObject ButtonPrefab;
     public Transform MenuPanel;
 
+    public void OnToggle(bool state){
+        // var colors =this.GetComponent<Button>().colors;
+        // colors.normalColor = state ? Color.green : Color.red ;
+    }
+
     public void AddParts(IEnumerable<CreaturePart> parts,
                          Image head_img,
                          Image legs_img,
