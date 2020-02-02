@@ -9,7 +9,7 @@ public class BiomeSelector : MonoBehaviour
     {
         Debug.Log("Biome Selector > Creature Editor: Grasslands");
 
-        GameState.active_habitat_state = GameState.GRASSLANDS;
+        GameState.active_habitat_state = HABITAT_STATES.GRASSLANDS;
         SceneManager.LoadScene("CreatureEditor");
     }
 
@@ -17,7 +17,7 @@ public class BiomeSelector : MonoBehaviour
     {
         Debug.Log("Biome Selector > Creature Editor: Tundra");
 
-        GameState.active_habitat_state = GameState.TUNDRA;
+        GameState.active_habitat_state = HABITAT_STATES.TUNDRA;
         SceneManager.LoadScene("CreatureEditor");
     }
 
@@ -25,7 +25,7 @@ public class BiomeSelector : MonoBehaviour
     {
         Debug.Log("Biome Selector > Creature Editor: Shore");
 
-        GameState.active_habitat_state = GameState.SHORE;
+        GameState.active_habitat_state = HABITAT_STATES.SHORE;
         SceneManager.LoadScene("CreatureEditor");
     }
 
@@ -33,7 +33,7 @@ public class BiomeSelector : MonoBehaviour
     {
         Debug.Log("Biome Selector > Creature Editor: Desert");
 
-        GameState.active_habitat_state = GameState.DESERT;
+        GameState.active_habitat_state = HABITAT_STATES.DESERT;
         SceneManager.LoadScene("CreatureEditor");
     }
 

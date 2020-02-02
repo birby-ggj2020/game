@@ -24,3 +24,8 @@ public class CreaturePart
         this.sprite = sprite;
     }
 }
+
+public static class CREATURE_PARTS
+{
+    
+}

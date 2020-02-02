@@ -7,12 +7,6 @@ using UnityEditor;
 
 public static class GameState
 {
-    public static HabitatState GRASSLANDS{get;}
-    public static HabitatState TUNDRA{get;}
-    public static HabitatState SHORE{get;}
-    public static HabitatState DESERT{get;}
-
-    public static List<HabitatState> all_habitats{get;}
     public static HabitatState active_habitat_state{get; set;}
     public static List<CreaturePart> creature_parts{get;}
     // public static Dictionary<CreaturePartType, List<CreaturePart> > creature_parts_by_type;
@@ -21,19 +15,7 @@ public static class GameState
     {
         Debug.Log("Loading State...");
 
-        GameState.GRASSLANDS = new HabitatState(new GrasslandsHabitat());
-        GameState.TUNDRA = new HabitatState(new TundraHabitat());
-        GameState.SHORE = new HabitatState(new ShoreHabitat());
-        GameState.DESERT = new HabitatState(new DesertHabitat());
-
-        GameState.all_habitats = new List<HabitatState>{
-            GameState.GRASSLANDS,
-            GameState.TUNDRA,
-            GameState.SHORE,
-            GameState.DESERT
-        };
         GameState.active_habitat_state = null;
-
         GameState.creature_parts = GameUtils.load_creature_parts(
             "creature_parts.json"
         );
@@ -53,10 +35,25 @@ public class HabitatState
         this.creature = new Creature();
     }
 
-    public bool creature_is_correct()
+    public CreatureOutcome creature_outcome()
     {
-        return this.habitat.creature_is_correct(this.creature);
+        return this.habitat.creature_outcome(this.creature);
     }
+}
+
+public static class HABITAT_STATES
+{
+    public static HabitatState GRASSLANDS = new HabitatState(new GrasslandsHabitat());
+    public static HabitatState TUNDRA = new HabitatState(new TundraHabitat());
+    public static HabitatState SHORE = new HabitatState(new ShoreHabitat());
+    public static HabitatState DESERT = new HabitatState(new DesertHabitat());
+    
+    public static List<HabitatState> ALL = new List<HabitatState>{
+        HABITAT_STATES.GRASSLANDS,
+        HABITAT_STATES.TUNDRA,
+        HABITAT_STATES.SHORE,
+        HABITAT_STATES.DESERT
+    };
 }
 
 public static class GameUtils
