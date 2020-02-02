@@ -25,7 +25,7 @@ public class CreatureEditor : MonoBehaviour
         Debug.Log("Starting Creature Editor: " + habitat.name);
 
         var image = this.GetComponentInChildren<Image>();
-        image.sprite = GameUtils.parse_sprite_path(habitat.background_img_path);
+        image.sprite = GameUtils.load_sprite(habitat.background_img_path);
 
         var audio =  Camera.main.GetComponent<AudioSource>();
         switch(habitat.name){
