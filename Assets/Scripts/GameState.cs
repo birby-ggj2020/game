@@ -1,36 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System;
 using UnityEngine;
 using UnityEditor;
 
 public static class GameState
 {
-    public static List<HabitatState> habitats;
-    public static int? active_habitat_index;
-    public static List<CreaturePart> creature_parts;
+    public static HabitatState GRASSLANDS{get;}
+    public static HabitatState TUNDRA{get;}
+    public static HabitatState SHORE{get;}
+    public static HabitatState DESERT{get;}
+
+    public static List<HabitatState> all_habitats{get;}
+    public static HabitatState active_habitat_state{get; set;}
+    public static List<CreaturePart> creature_parts{get;}
     // public static Dictionary<CreaturePartType, List<CreaturePart> > creature_parts_by_type;
 
     static GameState()
     {
-        GameState.habitats = new List<HabitatState>{
-            new HabitatState(new GrasslandsHabitat()),
-            new HabitatState(new TundraHabitat())
+        Debug.Log("Loading State...");
+
+        GameState.GRASSLANDS = new HabitatState(new GrasslandsHabitat());
+        GameState.TUNDRA = new HabitatState(new TundraHabitat());
+        GameState.SHORE = new HabitatState(new ShoreHabitat());
+        GameState.DESERT = new HabitatState(new DesertHabitat());
+
+        GameState.all_habitats = new List<HabitatState>{
+            GameState.GRASSLANDS,
+            GameState.TUNDRA,
+            GameState.SHORE,
+            GameState.DESERT
         };
-        GameState.active_habitat_index = null;
+        GameState.active_habitat_state = null;
 
         GameState.creature_parts = GameUtils.load_creature_parts(
             "creature_parts.json"
         );
-    }
-
-    public static HabitatState active_habitat_state()
-    {
-        if (GameState.active_habitat_index.HasValue)
-        {
-            return GameState.habitats[GameState.active_habitat_index.Value];
-        }
-        return null;
+        
+        Debug.Log("Loaded State.");
     }
 }
 

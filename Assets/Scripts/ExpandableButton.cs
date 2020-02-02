@@ -20,14 +20,10 @@ public class ExpandableButton : MonoBehaviour
             button.transform.SetParent(MenuPanel);
             var text = button.GetComponentInChildren<Text>();
             text.text = part.name;
-            Debug.Log("Adding button click");
             var b = button.GetComponent<Button>();
-            if(b != null){
-                Debug.Log("Found button");
-            }
             b.onClick.AddListener(
                 () => {
-                    Debug.Log("Clicked");
+                    Debug.Log("Clicked Part '" + part.name + "'");
                     Image sprite = null;
                     switch(part.type){
                         case CreaturePartType.HEAD:
@@ -49,7 +45,6 @@ public class ExpandableButton : MonoBehaviour
                         default:
                             throw new ArgumentOutOfRangeException();
                     }
-                    Debug.Log("Clicked");
                     sprite.gameObject.SetActive(true);
                     sprite.sprite = part.sprite; 
                 }

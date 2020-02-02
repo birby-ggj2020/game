@@ -11,10 +11,12 @@ public class PartsMenu : MonoBehaviour
 
     public GameObject PartButtonPrefab;
 
-    public Image LimbsImage;
-    public Image SkinImage;
-    public Image HeadImage;
-    public Image AccessoryImage;
+    public Image head_img;
+    public Image legs_img;
+    public Image back_img;
+    public Image tail_img;
+    // public Image skin_img; //TODO: how do we do skin??
+
     void Start()
     {
         this.m_parts = GameState.creature_parts;
@@ -26,7 +28,14 @@ public class PartsMenu : MonoBehaviour
             text.text = TypeToString(grouping.Key);
             partButton.transform.SetParent(this.transform);
             var expandableButton = partButton.GetComponentInChildren<ExpandableButton>();
-            expandableButton.AddParts(grouping, LimbsImage, SkinImage, HeadImage, AccessoryImage);        
+            expandableButton.AddParts(
+                grouping,
+                this.head_img,
+                this.legs_img,
+                this.back_img,
+                this.tail_img/*,
+                this.skin_img*/ //TODO: how do we do skin??
+            );
         }
     }
     private string TypeToString(CreaturePartType type){
@@ -40,7 +49,7 @@ public class PartsMenu : MonoBehaviour
             case CreaturePartType.TAIL:
                 return "Tail";
             case CreaturePartType.SKIN:
-                return "Skins";
+                return "Skin";
             default:
                 throw new ArgumentOutOfRangeException("");
         }

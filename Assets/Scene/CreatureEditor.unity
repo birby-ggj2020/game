@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 504462077}
   - component: {fileID: 504462076}
   m_Layer: 5
-  m_Name: Skin
+  m_Name: Creature Part - Skin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -449,7 +449,7 @@ GameObject:
   - component: {fileID: 549949403}
   - component: {fileID: 549949402}
   m_Layer: 5
-  m_Name: Tail
+  m_Name: Creature Part - Tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -620,10 +620,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PartButtonPrefab: {fileID: 5735832546779003721, guid: 58fd51410316dd64d890207bd8e6cc72,
     type: 3}
-  LimbsImage: {fileID: 1438351468}
-  SkinImage: {fileID: 504462076}
-  HeadImage: {fileID: 1508657016}
-  AccessoryImage: {fileID: 1971329149}
+  head_img: {fileID: 1508657016}
+  legs_img: {fileID: 1438351468}
+  back_img: {fileID: 1971329149}
+  tail_img: {fileID: 549949402}
 --- !u!1 &840022560
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,7 +636,7 @@ GameObject:
   - component: {fileID: 840022563}
   - component: {fileID: 840022562}
   m_Layer: 5
-  m_Name: Body
+  m_Name: Creature Part - Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -865,7 +865,7 @@ GameObject:
   - component: {fileID: 1438351469}
   - component: {fileID: 1438351468}
   m_Layer: 5
-  m_Name: Legs
+  m_Name: Creature Part - Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -937,7 +937,7 @@ GameObject:
   - component: {fileID: 1508657017}
   - component: {fileID: 1508657016}
   m_Layer: 5
-  m_Name: Head
+  m_Name: Creature Part - Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1134,7 +1134,7 @@ GameObject:
   - component: {fileID: 1971329150}
   - component: {fileID: 1971329149}
   m_Layer: 5
-  m_Name: Back
+  m_Name: Creature Part - Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -7,11 +7,15 @@ public class MainMenu : MonoBehaviour
 {
     public void Play()
     {
+        Debug.Log("Main Menu > Biome Selector");
+
         SceneManager.LoadScene("BiomeSelector");
     }
 
     public void Exit()
     {
+        Debug.Log("Main Menu > Exit");
+
         Application.Quit();
     }
 }

@@ -49,3 +49,43 @@ public class TundraHabitat : Habitat
             && creature.back.name == "furry";
     }
 }
+
+public class ShoreHabitat : Habitat
+{
+    public string name
+    {
+        get => "Shore";
+    }
+
+    public string background_img_path
+    {
+        get => "Assets/Graphics/shore.png";
+    }
+
+    public bool creature_is_correct(Creature creature)
+    {
+        return false;
+        // return creature.legs.name == "furry"
+        //     && creature.back.name == "furry";
+    }
+}
+
+public class DesertHabitat : Habitat
+{
+    public string name
+    {
+        get => "Desert";
+    }
+
+    public string background_img_path
+    {
+        get => "Assets/Graphics/desert.png";
+    }
+
+    public bool creature_is_correct(Creature creature)
+    {
+        return false;
+        // return creature.legs.name == "furry"
+        //     && creature.back.name == "furry";
+    }
+}

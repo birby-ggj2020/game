@@ -4,32 +4,28 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEditor;
+
 public class CreatureEditor : MonoBehaviour
 {
-     void Start()
-    {   
-        if(GameState.active_habitat_index.HasValue){
-            var image = this.GetComponentInChildren<Image>();
-            var path = GameState.active_habitat_state().habitat.background_img_path;
-            image.sprite = GameUtils.parse_sprite_path(path);
+    void Start()
+    {
+        HabitatState habitat_state = GameState.active_habitat_state;
+        if (habitat_state == null)
+        {
+            Debug.LogError("Started Creature Editor with no active habitat");
+            return;
         }
+        Habitat habitat = habitat_state.habitat;
+        Debug.Log("Starting Creature Editor: " + habitat.name);
+
+        var image = this.GetComponentInChildren<Image>();
+        image.sprite = GameUtils.parse_sprite_path(habitat.background_img_path);
     }
 
-    public static Sprite _parse_sprite_path(string sprite_path)
+    public void Back()
     {
-        var texture = AssetDatabase.LoadAssetAtPath(
-            sprite_path,
-            typeof(Texture2D)
-        ) as Texture2D;
-        var sprite = Sprite.Create(
-            texture,
-            new Rect(0, 0, texture.width, texture.height),
-            new Vector2(0f, 0f), 1.0f
-        );
-        return sprite;       
-    }
-    public void Back(){
-        Debug.Log("Button Clicked");
+        Debug.Log("Creature Editor > Biome Selector");
+
         SceneManager.LoadScene("BiomeSelector");
     }
 }
