@@ -1,24 +1,259 @@
 {
     "parts": [
         {
-            "name": "LongNeck",
+            "name": "feathers",
+            "type": "tail",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-2.png"
+        },
+        {
+            "name": "dino",
+            "type": "tail",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-3.png"
+        },
+        {
+            "name": "scorpion",
+            "type": "tail",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-4.png"
+        },
+        {
+            "name": "propeller",
+            "type": "tail",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-5.png"
+        },
+        {
+            "name": "thagomizer",
+            "type": "tail",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-6.png"
+        },
+        {
+            "name": "snake",
+            "type": "tail",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-7.png"
+        },
+        {
+            "name": "horse",
+            "type": "tail",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-8.png"
+        },
+        {
+            "name": "whale",
+            "type": "tail",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-9.png"
+        },
+        {
+            "name": "rattle",
+            "type": "tail",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-10.png"
+        },
+        {
+            "name": "decoy",
+            "type": "tail",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-11.png"
+        },
+        {
+            "name": "tank",
+            "type": "back",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-12.png"
+        },
+        {
+            "name": "tortoise",
+            "type": "back",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-13.png"
+        },
+        {
+            "name": "camel",
+            "type": "back",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-14.png"
+        },
+        {
+            "name": "batwings",
+            "type": "back",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-15.png"
+        },
+        {
+            "name": "tower",
+            "type": "back",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-16.png"
+        },
+        {
+            "name": "birdwings",
+            "type": "back",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-17.png"
+        },
+        {
+            "name": "spikes",
+            "type": "back",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-18.png"
+        },
+        {
+            "name": "snail",
+            "type": "back",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-19.png"
+        },
+        {
+            "name": "saddle",
+            "type": "back",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-20.png"
+        },
+        {
+            "name": "sailfin",
+            "type": "back",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-21.png"
+        },
+        {
+            "name": "furry",
+            "type": "back",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-22.png"
+        },
+        {
+            "name": "elephant",
+            "type": "legs",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-23.png"
+        },
+        {
+            "name": "bird",
+            "type": "legs",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-24.png"
+        },
+        {
+            "name": "flippers",
+            "type": "legs",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-25.png"
+        },
+        {
+            "name": "wheels",
+            "type": "legs",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-26.png"
+        },
+        {
+            "name": "frog",
+            "type": "legs",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-27.png"
+        },
+        {
+            "name": "horse",
+            "type": "legs",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-28.png"
+        },
+        {
+            "name": "tentacles",
+            "type": "legs",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-29.png"
+        },
+        {
+            "name": "bug",
+            "type": "legs",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-30.png"
+        },
+        {
+            "name": "man",
+            "type": "legs",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-31.png"
+        },
+        {
+            "name": "furry",
+            "type": "legs",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-32.png"
+        },
+        {
+            "name": "fish",
             "type": "head",
-            "sprite_path": "Assets/Graphics/creature_parts/Exquisite_Small-24.png"
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-33.png"
         },
         {
-            "name": "LongLegs",
-            "type": "limbs",
-            "sprite_path": "Assets/Graphics/creature_parts/Exquisite_Small-21.png"
+            "name": "duck",
+            "type": "head",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-34.png"
         },
         {
-            "name": "Wheels",
-            "type": "limbs",
-            "sprite_path": "Assets/Graphics/creature_parts/Exquisite_Small-19.png"
+            "name": "brontosaurus",
+            "type": "head",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-35.png"
         },
         {
-            "name": "Wings",
-            "type": "accessory",
-            "sprite_path": "Assets/Graphics/creature_parts/Exquisite_Small-14.png"
+            "name": "rhino",
+            "type": "head",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-36.png"
+        },
+        {
+            "name": "friend",
+            "type": "head",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-37.png"
+        },
+        {
+            "name": "centaur",
+            "type": "head",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-38.png"
+        },
+        {
+            "name": "horse",
+            "type": "head",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-39.png"
+        },
+        {
+            "name": "unicorn",
+            "type": "head",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-40.png"
+        },
+        {
+            "name": "dootdoot",
+            "type": "head",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-41.png"
+        },
+        {
+            "name": "washington",
+            "type": "head",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-42.png"
+        },
+        {
+            "name": "whale",
+            "type": "head",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-43.png"
+        },
+        {
+            "name": "bull",
+            "type": "head",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-44.png"
+        },
+        {
+            "name": "speckle",
+            "type": "skin",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-45.png"
+        },
+        {
+            "name": "red",
+            "type": "skin",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-46.png"
+        },
+        {
+            "name": "gold",
+            "type": "skin",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-47.png"
+        },
+        {
+            "name": "metal",
+            "type": "skin",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-48.png"
+        },
+        {
+            "name": "lizard",
+            "type": "skin",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-49.png"
+        },
+        {
+            "name": "paper",
+            "type": "skin",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-50.png"
+        },
+        {
+            "name": "greenstripe",
+            "type": "skin",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-51.png"
+        },
+        {
+            "name": "polkadot",
+            "type": "skin",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite3-52.png"
         }
     ]
 }
