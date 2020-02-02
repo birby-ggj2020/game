@@ -9,10 +9,9 @@ public static class GameUtils
 {
     public static Sprite load_sprite(string sprite_path)
     {
-        var texture = AssetDatabase.LoadAssetAtPath(
-            sprite_path,
-            typeof(Texture2D)
-        ) as Texture2D;
+        string filepath = Application.dataPath + "/" + sprite_path;
+        Texture2D texture = new Texture2D(2, 2);
+        texture.LoadImage(File.ReadAllBytes(filepath));
         var sprite = Sprite.Create(
             texture,
             new Rect(0, 0, texture.width, texture.height),

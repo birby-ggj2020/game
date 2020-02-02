@@ -41,9 +41,9 @@ public class BiomeSelector : MonoBehaviour
     {
         if (state.creature_outcome().is_good)
         {
-            return "Assets/Graphics/Birby-2.png";
+            return "Graphics/Birby-2.png";
         }
-        return "Assets/Graphics/Birby-1.png";
+        return "Graphics/Birby-1.png";
     }
 
     public void OpenGrasslandsBiome()

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,36 +21,43 @@ public class GrasslandsHabitat : Habitat
 
     public string background_img_path
     {
-        get => "Assets/Graphics/grasslands.png";
+        get => "Graphics/grasslands.png";
     }
 
     public CreatureOutcome creature_outcome(Creature creature)
     {
-        if (creature.head.name == "fish")
+        try
         {
-            return CREATURE_OUTCOMES.SUFFOCATE;
+            if (creature.head.name == "fish")
+            {
+                return CREATURE_OUTCOMES.SUFFOCATE;
+            }
+            if (creature.head.name == "brontosaurus")
+            {
+                return CREATURE_OUTCOMES.REACH_TREE;
+            }
+            if (creature.head.name == "centaur")
+            {
+                return CREATURE_OUTCOMES.HEAD_HIT_TREE;
+            }
+            if (creature.back.name == "tank")
+            {
+                return CREATURE_OUTCOMES.BACK_HIT_TREE;
+            }
+            if (creature.back.name == "batwings"
+                || creature.back.name == "birdwings"
+                || creature.tail.name == "propeller")
+            {
+                return CREATURE_OUTCOMES.FLY;
+            }
+            if (creature.tail.name == "thagomizer")
+            {
+                return CREATURE_OUTCOMES.TAIL_HIT_TREE;
+            }
         }
-        if (creature.head.name == "brontosaurus")
+        catch (NullReferenceException)
         {
-            return CREATURE_OUTCOMES.REACH_TREE;
-        }
-        if (creature.head.name == "centaur")
-        {
-            return CREATURE_OUTCOMES.HEAD_HIT_TREE;
-        }
-        if (creature.back.name == "tank")
-        {
-            return CREATURE_OUTCOMES.BACK_HIT_TREE;
-        }
-        if (creature.back.name == "batwings"
-            || creature.back.name == "birdwings"
-            || creature.tail.name == "propeller")
-        {
-            return CREATURE_OUTCOMES.FLY;
-        }
-        if (creature.tail.name == "thagomizer")
-        {
-            return CREATURE_OUTCOMES.TAIL_HIT_TREE;
+            //TODO: force all parts to be set.
         }
         return CREATURE_OUTCOMES.STARVE;
     }
@@ -64,7 +72,7 @@ public class TundraHabitat : Habitat
 
     public string background_img_path
     {
-        get => "Assets/Graphics/snow.png";
+        get => "Graphics/snow.png";
     }
 
     public CreatureOutcome creature_outcome(Creature creature)
@@ -83,7 +91,7 @@ public class ShoreHabitat : Habitat
 
     public string background_img_path
     {
-        get => "Assets/Graphics/shore.png";
+        get => "Graphics/shore.png";
     }
 
     public CreatureOutcome creature_outcome(Creature creature)
@@ -102,7 +110,7 @@ public class DesertHabitat : Habitat
 
     public string background_img_path
     {
-        get => "Assets/Graphics/desert.png";
+        get => "Graphics/desert.png";
     }
 
     public CreatureOutcome creature_outcome(Creature creature)
