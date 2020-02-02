@@ -8,8 +8,13 @@ public class ExpandableButton : MonoBehaviour
     public GameObject ButtonPrefab;
     public Transform MenuPanel;
 
-    public void AddParts(IEnumerable<CreaturePart> parts, Image LimbsImage, Image SkinImage, Image HeadImage, Image AccessoryImage ){
-
+    public void AddParts(IEnumerable<CreaturePart> parts,
+                         Image head_img,
+                         Image legs_img,
+                         Image back_img,
+                         Image tail_img/*,
+                         Image skin_img*/) //TODO: how do we do skin??
+    {
         foreach(var part in parts){
             var button = GameObject.Instantiate(ButtonPrefab);
             button.transform.SetParent(MenuPanel);
@@ -25,18 +30,22 @@ public class ExpandableButton : MonoBehaviour
                     Debug.Log("Clicked");
                     Image sprite = null;
                     switch(part.type){
-                        case CreaturePartType.ACCESSORY:
-                            sprite = AccessoryImage;
-                            break;
                         case CreaturePartType.HEAD:
-                            sprite = HeadImage;
+                            sprite = head_img;
                             break;
-                        case CreaturePartType.LIMBS:
-                            sprite = LimbsImage;
+                        case CreaturePartType.LEGS:
+                            sprite = legs_img;
                             break;
-                        case CreaturePartType.SKIN:
-                            sprite = SkinImage;
+                        case CreaturePartType.BACK:
+                            sprite = back_img;
                             break;
+                        case CreaturePartType.TAIL:
+                            sprite = tail_img;
+                            break;
+                        //TODO: how do we do skin??
+                        // case CreaturePartType.SKIN:
+                        //     sprite = skin_img;
+                        //     break;
                         default:
                             throw new ArgumentOutOfRangeException();
                     }

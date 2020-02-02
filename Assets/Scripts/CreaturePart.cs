@@ -3,9 +3,9 @@
 public enum CreaturePartType
 {
     HEAD,
-    LIMBS,
-    //BODY,
-    ACCESSORY,
+    LEGS,
+    BACK,
+    TAIL,
     SKIN
 }
 

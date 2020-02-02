@@ -70,9 +70,9 @@ public static class GameUtils
     private static Dictionary<string, CreaturePartType> _PART_TYPE_LOOKUP
         = new Dictionary<string, CreaturePartType>{
             ["head"] = CreaturePartType.HEAD,
-            ["limbs"] = CreaturePartType.LIMBS,
-            // ["body"] = CreaturePartType.BODY,
-            ["accessory"] = CreaturePartType.ACCESSORY,
+            ["legs"] = CreaturePartType.LEGS,
+            ["back"] = CreaturePartType.BACK,
+            ["tail"] = CreaturePartType.TAIL,
             ["skin"] = CreaturePartType.SKIN
         };
 

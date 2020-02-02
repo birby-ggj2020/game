@@ -25,8 +25,9 @@ public class GrasslandsHabitat : Habitat
 
     public bool creature_is_correct(Creature creature)
     {
-        return creature.head.name == "LongNeck"
-            && creature.limbs.name == "LongLegs";
+        return creature.head.name == "brontosaurus"
+            || creature.back.name == "batwings"
+            || creature.back.name == "birdwings";
     }
 }
 
@@ -44,6 +45,7 @@ public class TundraHabitat : Habitat
 
     public bool creature_is_correct(Creature creature)
     {
-        return creature.skin.name == "Hair";
+        return creature.legs.name == "furry"
+            && creature.back.name == "furry";
     }
 }

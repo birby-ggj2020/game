@@ -31,32 +31,20 @@ public class PartsMenu : MonoBehaviour
     }
     private string TypeToString(CreaturePartType type){
         switch(type){
-            case CreaturePartType.ACCESSORY:
-                return "Accessories";
             case CreaturePartType.HEAD:
-                return "Heads";
-            case CreaturePartType.LIMBS:
-                return "Limbs";
+                return "Head";
+            case CreaturePartType.LEGS:
+                return "Legs";
+            case CreaturePartType.BACK:
+                return "Back";
+            case CreaturePartType.TAIL:
+                return "Tail";
             case CreaturePartType.SKIN:
                 return "Skins";
             default:
                 throw new ArgumentOutOfRangeException("");
         }
     }
-    
-
-    //  public static T[] GetAllInstances<T>() where T : ScriptableObject
-    //  {
-    //      string[] guids = AssetDatabase.FindAssets("t:"+ typeof(T).Name);  //FindAssets uses tags check documentation for more info
-    //      T[] a = new T[guids.Length];
-    //      for(int i =0;i<guids.Length;i++)         //probably could get optimized 
-    //      {
-    //          string path = AssetDatabase.GUIDToAssetPath(guids[i]);
-    //          a[i] = AssetDatabase.LoadAssetAtPath<T>(path);
-    //      }      
-    //      return a;
-    //  }
-     
 
     // Update is called once per frame
     void Update()
