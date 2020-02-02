@@ -96,7 +96,7 @@ public static class _CreaturePartLoader
         return _CreaturePartLoader._PART_TYPE_LOOKUP[name];
     }
 
-    private static Sprite _parse_sprite_path(string sprite_path)
+    public static Sprite _parse_sprite_path(string sprite_path)
     {
         var texture = AssetDatabase.LoadAssetAtPath(
             sprite_path,
