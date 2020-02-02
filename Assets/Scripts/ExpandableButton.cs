@@ -33,15 +33,19 @@ public class ExpandableButton : MonoBehaviour
                     switch(part.type){
                         case CreaturePartType.HEAD:
                             sprite = head_img;
+                            GameState.active_habitat_state.creature.head = part;
                             break;
                         case CreaturePartType.LEGS:
                             sprite = legs_img;
+                            GameState.active_habitat_state.creature.legs = part;
                             break;
                         case CreaturePartType.BACK:
                             sprite = back_img;
+                            GameState.active_habitat_state.creature.back = part;
                             break;
                         case CreaturePartType.TAIL:
                             sprite = tail_img;
+                            GameState.active_habitat_state.creature.tail = part;
                             break;
                         //TODO: how do we do skin??
                         // case CreaturePartType.SKIN:
@@ -52,6 +56,7 @@ public class ExpandableButton : MonoBehaviour
                     }
                     sprite.gameObject.SetActive(true);
                     sprite.sprite = part.sprite; 
+                    
                 }
             );
         }

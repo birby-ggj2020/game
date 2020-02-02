@@ -21,6 +21,26 @@ public class PartsMenu : MonoBehaviour
 
     void Start()
     {
+        if(GameState.active_habitat_state.creature != null){
+            Debug.Log("We have active habitat");
+            if(GameState.active_habitat_state.creature.back != null){
+                back_img.sprite = GameState.active_habitat_state.creature.back.sprite;
+                back_img.gameObject.SetActive(true);
+            }
+            if(GameState.active_habitat_state.creature.head != null){
+                head_img.sprite = GameState.active_habitat_state.creature.head.sprite;
+                head_img.gameObject.SetActive(true);
+            }
+            if(GameState.active_habitat_state.creature.legs != null){
+                legs_img.sprite = GameState.active_habitat_state.creature.legs.sprite;
+                legs_img.gameObject.SetActive(true);
+            }
+            if(GameState.active_habitat_state.creature.tail != null){
+                tail_img.sprite = GameState.active_habitat_state.creature.tail.sprite;
+                tail_img.gameObject.SetActive(true);
+            }
+        }
+
         var buttons = new List<Button>(); 
         this.m_parts = GameState.creature_parts;
         var groupedParts = this.m_parts.GroupBy(p => p.type);
