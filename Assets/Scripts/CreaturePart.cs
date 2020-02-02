@@ -284,7 +284,7 @@ public static class CREATURE_PARTS
         CreaturePartType.SKIN,
         GameUtils.load_sprite("Assets/Graphics/creature_parts/Exquisite_animated_1k-88.png")
     );
-    
+
     public static List<CreaturePart> ALL = new List<CreaturePart>{
         TAIL_FEATHERS,
         TAIL_DINO,
