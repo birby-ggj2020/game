@@ -15,13 +15,12 @@ public class CreatureEditor : MonoBehaviour
     public AudioClip Desert;
     void Start()
     {
-        HabitatState habitat_state = GameState.active_habitat_state;
-        if (habitat_state == null)
+        if (GameState.active_habitat_state == null)
         {
-            Debug.LogError("Started Creature Editor with no active habitat");
-            return;
+            Debug.Log("Started Creature Editor with no active habitat; defaulting to Grasslands");
+            GameState.active_habitat_state = GameState.GRASSLANDS;
         }
-        Habitat habitat = habitat_state.habitat;
+        Habitat habitat = GameState.active_habitat_state.habitat;
         Debug.Log("Starting Creature Editor: " + habitat.name);
 
         var image = this.GetComponentInChildren<Image>();
