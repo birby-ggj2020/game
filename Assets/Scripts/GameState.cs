@@ -5,16 +5,12 @@ using UnityEngine;
 public static class GameState
 {
     public static HabitatState active_habitat_state{get; set;}
-    public static List<CreaturePart> creature_parts{get;}
 
     static GameState()
     {
         Debug.Log("Loading State...");
 
         GameState.active_habitat_state = null;
-        GameState.creature_parts = GameUtils.load_creature_parts(
-            "creature_parts.json"
-        );
         
         Debug.Log("Loaded State.");
     }

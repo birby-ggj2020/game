@@ -42,7 +42,7 @@ public class PartsMenu : MonoBehaviour
         }
 
         var buttons = new List<Button>(); 
-        this.m_parts = GameState.creature_parts;
+        this.m_parts = CREATURE_PARTS.ALL;
         var groupedParts = this.m_parts.GroupBy(p => p.type);
         var toggleGroup = this.GetComponent<ToggleGroup>();
 
