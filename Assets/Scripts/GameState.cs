@@ -29,6 +29,8 @@ public class HabitatState
     public Habitat habitat {get;}
     public Creature creature {get;}
 
+    public bool isRunning {get;set;}
+
     public HabitatState(Habitat hab)
     {
         this.habitat = hab;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class CreatureEditor : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class CreatureEditor : MonoBehaviour
     public AudioClip Desert;
 
     public GameObject PartsMenu;
+
+    public GameObject PlayButton;
     void Start()
     {
         if (GameState.active_habitat_state == null)
@@ -53,7 +56,8 @@ public class CreatureEditor : MonoBehaviour
     public void TogglePlay(bool play){
         
         PartsMenu.SetActive(play);
-
+        GameState.active_habitat_state.isRunning = play;        
+        PlayButton.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = play ? "Play" : "Stop";
     }
 
     public void Back()
