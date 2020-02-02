@@ -1,0 +1,24 @@
+{
+    "parts": [
+        {
+            "name": "LongNeck",
+            "type": "head",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite_Small-24.png"
+        },
+        {
+            "name": "LongLegs",
+            "type": "limbs",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite_Small-21.png"
+        },
+        {
+            "name": "Wheels",
+            "type": "limbs",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite_Small-19.png"
+        },
+        {
+            "name": "Wings",
+            "type": "accessory",
+            "sprite_path": "Assets/Graphics/creature_parts/Exquisite_Small-14.png"
+        }
+    ]
+}
