@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public interface Habitat
 {
     string name {get;}
-    Image background_img {get;}
+    string background_img_path {get;}
     bool creature_is_correct(Creature creature);
 }
 
@@ -18,9 +18,9 @@ public class GrasslandsHabitat : Habitat
         get => "Grasslands";
     }
 
-    public Image background_img
+    public string background_img_path
     {
-        get => Resources.Load("Assets/Graphics/grasslands.png") as Image;
+        get => "Assets/Graphics/grasslands.png";
     }
 
     public bool creature_is_correct(Creature creature)
@@ -37,9 +37,9 @@ public class TundraHabitat : Habitat
         get => "Tundra";
     }
 
-    public Image background_img
+    public string background_img_path
     {
-        get => Resources.Load("Assets/Graphics/snow.png") as Image;
+        get => "Assets/Graphics/snow.png";
     }
 
     public bool creature_is_correct(Creature creature)
