@@ -19,7 +19,7 @@ public class CreatureEditor : MonoBehaviour
         if (GameState.active_habitat_state == null)
         {
             Debug.Log("Started Creature Editor with no active habitat; defaulting to Grasslands");
-            GameState.active_habitat_state = GameState.GRASSLANDS;
+            GameState.active_habitat_state = HABITAT_STATES.GRASSLANDS;
         }
         Habitat habitat = GameState.active_habitat_state.habitat;
         Debug.Log("Starting Creature Editor: " + habitat.name);
