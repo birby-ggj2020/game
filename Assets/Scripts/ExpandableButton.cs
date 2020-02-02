@@ -12,7 +12,7 @@ public class ExpandableButton : MonoBehaviour
 
         foreach(var part in parts){
             var button = GameObject.Instantiate(ButtonPrefab);
-            button.transform.parent = MenuPanel;
+            button.transform.SetParent(MenuPanel);
             var text = button.GetComponentInChildren<Text>();
             text.text = part.name;
 

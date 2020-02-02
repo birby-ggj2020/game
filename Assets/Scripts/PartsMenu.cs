@@ -24,7 +24,7 @@ public class PartsMenu : MonoBehaviour
             var partButton = Instantiate(PartButtonPrefab, new Vector3(0,0,0), Quaternion.identity);
             var text = partButton.GetComponentInChildren<Text>();
             text.text = TypeToString(grouping.Key);
-            partButton.transform.parent = this.transform;
+            partButton.transform.SetParent(this.transform);
             var expandableButton = partButton.GetComponentInChildren<ExpandableButton>();
             expandableButton.AddParts(grouping, LimbsImage, SkinImage, HeadImage, AccessoryImage);        
         }
