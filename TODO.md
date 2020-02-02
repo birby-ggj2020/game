@@ -1,0 +1,14 @@
+- design puzzles/parts
+    - assets/animations for outcomes
+- creature editor
+    - run mode
+        - sound effects
+        - creature part animations
+        - how do we show outcomes?
+            - animate creatures?
+            - animate environment/props?
+            - change creature position to match animations?
+    - allow "none" for each part
+- biome selector
+    - show current creature on each biome
+        - draw scaled down creature
