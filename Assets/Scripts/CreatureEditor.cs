@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEditor;
 
 public class CreatureEditor : MonoBehaviour
 {
@@ -13,6 +12,8 @@ public class CreatureEditor : MonoBehaviour
 
     public AudioClip Shore;
     public AudioClip Desert;
+
+    public GameObject PartsMenu;
     void Start()
     {
         if (GameState.active_habitat_state == null)
@@ -45,6 +46,14 @@ public class CreatureEditor : MonoBehaviour
         }
         audio.loop = true;
         audio.Play();
+
+
+    }
+
+    public void TogglePlay(bool play){
+        
+        PartsMenu.SetActive(play);
+
     }
 
     public void Back()
